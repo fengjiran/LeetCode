@@ -7,11 +7,14 @@ struct ListNode
     struct ListNode *next;
 };
 
+// 给原链表建立一个头结点，这样判断边界条件比较方便
 struct ListNode *reverseBetween(struct ListNode *head, int m, int n)
 {
-    struct ListNode *pre = head;
+    struct ListNode *dummy = (struct ListNode *)malloc(sizeof(struct ListNode));
+    dummy->next = head;
+    struct ListNode *pre = dummy;
     int i;
-    for (i = 1; i < m - 1; i++)
+    for (i = 0; i < m - 1; i++)
         pre = pre->next;
 
     struct ListNode *head2 = pre;
@@ -26,5 +29,5 @@ struct ListNode *reverseBetween(struct ListNode *head, int m, int n)
         cur = pre->next;
     }
 
-    return head;
+    return dummy->next;
 }
