@@ -9,14 +9,14 @@ struct ListNode
 
 struct ListNode *reverseBetween(struct ListNode *head, int m, int n)
 {
-    ListNode *pre = head;
+    struct ListNode *pre = head;
     int i;
     for (i = 1; i < m - 1; i++)
         pre = pre->next;
 
-    ListNode *head2 = pre;
+    struct ListNode *head2 = pre;
     pre = head2->next;
-    ListNode *cur = pre->next;
+    struct ListNode *cur = pre->next;
 
     for (i = m; i < n; i++)
     {
