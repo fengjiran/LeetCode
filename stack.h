@@ -13,4 +13,10 @@ typedef struct
     int stacksize;
 } SqStack;
 
+void initStack(SqStack *S);
+bool isStackEmpty(SqStack *S);
+bool isStackFull(SqStack *S);
+void push(SqStack *S, ElemType e);
+void pop(SqStack *S, ElemType *e);
+
 #endif
