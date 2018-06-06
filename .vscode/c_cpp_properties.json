@@ -9,6 +9,13 @@
                 "limitSymbolsToIncludedHeaders": true
             },
             "includePath": [
+                "/usr/include",
+                "/usr/local/include",
+                "/Library/Developer/CommandLineTools/usr/include/c++/v1",
+                "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include",
+                "/Library/Developer/CommandLineTools/usr/include",
+                "/System/Library/Frameworks",
+                "/Library/Frameworks",
                 "${workspaceFolder}/**"
             ],
             "defines": [],
