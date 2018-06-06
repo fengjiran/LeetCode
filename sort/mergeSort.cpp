@@ -30,7 +30,7 @@ void merge(int *data, int nLpos, int nRpos, int nRightEnd)
 
     nTmpPos = 0;
 
-    for (i = k; i < nLen; i++)
+    for (i = k; i <= nRightEnd; i++)
         data[i] = a[nTmpPos++];
 
     free(a);
